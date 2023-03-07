@@ -9,38 +9,36 @@
         populaVetor(vetorA);
         populaVetor(vetorB);
 
-        populaVetorC(vetorA, vetorB);
+        populaVetorC(vetorA, vetorB, vetorC);
 
+        Console.Write($"Imprimindo o vetor C: ");
         foreach (int i in vetorC)
         {
             Console.Write(i + " ");
         }
 
-        int[] populaVetor(int[] vetor)
+        void populaVetor(int[] vetor)
         {
             Console.WriteLine("Informe 5 valores para o vetor: ");
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < vetor.Length; i++)
             {
+                Console.Write($"{i+1}° posição: ");
                 vetor[i] = int.Parse(Console.ReadLine());
             }
-
-            return vetor;
         }
 
-        int[] populaVetorC(int[] vetorA, int[] vetorB)
+        void populaVetorC(int[] vetorA, int[] vetorB, int[] vetorC)
         {
             int i;
-            for(i = 0; i < 5; i++)
+            for(i = 0; i < vetorA.Length; i++)
             {
                 vetorC[i] = vetorA[i];
             }
-            for(int j = 0; j < 5; j++)
+            for(int j = 0; j < vetorB.Length; j++)
             {
                 vetorC[i] = vetorB[j];
                 i++;
             }
-
-            return vetorC;
         }
     }
 }
