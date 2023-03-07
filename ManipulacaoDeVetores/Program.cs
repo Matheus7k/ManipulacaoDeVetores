@@ -6,8 +6,8 @@
         int[] vetorB = new int[5];
         int[] vetorC = new int[10];
 
-        vetorA = populaVetor();
-        vetorB = populaVetor();
+        populaVetor(vetorA);
+        populaVetor(vetorB);
 
         populaVetorC(vetorA, vetorB);
 
@@ -16,9 +16,8 @@
             Console.Write(i + " ");
         }
 
-        int[] populaVetor()
+        int[] populaVetor(int[] vetor)
         {
-            int[] vetor = new int[5];
             Console.WriteLine("Informe 5 valores para o vetor: ");
             for (int i = 0; i < 5; i++)
             {
