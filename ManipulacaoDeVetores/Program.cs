@@ -11,11 +11,7 @@
 
         populaVetorC(vetorA, vetorB, vetorC);
 
-        Console.Write($"Imprimindo o vetor C: ");
-        foreach (int i in vetorC)
-        {
-            Console.Write(i + " ");
-        }
+        imprimeVetor(vetorC);
 
         void populaVetor(int[] vetor)
         {
@@ -38,6 +34,15 @@
             {
                 vetorC[i] = vetorB[j];
                 i++;
+            }
+        }
+
+        void imprimeVetor(int[] vetor)
+        {
+            Console.Write($"Imprimindo o vetor C: ");
+            foreach (int i in vetor)
+            {
+                Console.Write(i + " ");
             }
         }
     }
